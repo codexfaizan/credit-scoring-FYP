@@ -1,0 +1,42 @@
+
+.h5{
+    color: rgb(29, 234, 29);
+}
+h1{
+    color: rgb(50, 245, 135);
+    align-items: center;
+    padding-left: 130px;
+    padding-top: 80px;
+}
+.image01{
+    width: 120%;
+}
+.row{
+    margin-top: 100px;
+    padding-top: 100px;
+}
+#email-pass-portion{
+    align-items: center;
+    padding-left: 180px;
+    padding-top: 10px;
+}
+.login{
+    padding-top: 20px;
+    padding-right: 10px;
+    margin-right: 10px;
+    align-items:flex-end;
+}
+.line{
+    width: 50%;
+}
+.input-email{
+    
+    border-color: rgb(3, 150, 3);
+}
+h4{
+    color: #2e2e2e;
+}
+.submit{
+    background-color: rgb(32, 105, 32);
+    color: white;
+}

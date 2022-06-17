@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='about.css')}}">  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us</title>
+  </head>
+  <style>
+    body
+    {
+    background-image:url({{url_for('static',filename="bg01.png")}})
+    }
+  </style>
+  <body >
+
+    <nav class="navbar navbar-expand-lg bg-outline  continer">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home">
+          <img src="static/logo.png" width="20%">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 container">
+            <li class="nav-item home">
+              <a class="nav-link " aria-current="page" href="/home"><h3>Home</h3></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/about"><h3>About Us</h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br>
+      <center class="container">
+    <h1 class="abouth1">-About Us-</h1><br>
+    <h5> In the past few years machine learning has revolutionized the world of computer science. In banking and finance, it has helped us reducing the risk of bankruptcy. Our project that is related to credit score is a numerical expression that tells us whether a person is a defaulter or not. We have evaluated and compared the performance of various machine learning (ML) classifiers for credit scoring and bankruptcy prediction. In our project, we have classified the people into two groups as defaulter or non-defaulter. Many machine learning techniques have helped us solve the problem of classifying people so that we know which one are eligible for loan or not.
+        In our empirical study, we read nine research articles that helped us know which classification techniques can yield better results. There were 6 available datasets among which we chose “GIVE ME SOME CREDIT” from Kaggle as our credit scoring dataset. We had to perform a lot of pre-processing on the data like filling null values using appropriate techniques, balancing good and bad loans, removing the outliers etc. and then reduced the features from 21 to 4 characteristic features.
+        The classifiers that we are using are Random Forest Classifier, Decision tree classifier, gradient classifier, logistic regression and bagging. The minimum accuracy we got was up to 85% from decision trees. Among these classifiers, gradient boosting and bagging yielded the highest accuracy of up to 95%.
+    </h5>
+    <br>
+</center>
+<center>
+      <h2 class="abouth2">-Working Of A Banking System-</h2>
+      <img class="flowchart" src="static/flowchart-removed.png">
+</center>
+          <center>
+        <div class="card" style="width: 18rem;">
+            <img src="static/hanif.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title ">Supervisor</h5>
+              <p class="card-text">Dr Hanif Daurad</p>
+            </div>
+          </div>
+          <br><br>
+        </center>
+    
+
+    <div class="row container">
+      <div class="col-lg-3">   
+      </div>
+    <div class="col-lg-3">
+    <center>
+          <div class="card" style="width: 18rem;">
+            <img src="static/faizan.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Member</h5>
+              <p class="card-text">Faizan Ul Islam</p>
+            </div>
+          </div>
+        </center>
+    </div>
+        <div class="col-lg-6">
+        <center>
+          <div class="card" style="width: 18rem;">
+            <img src="static/hamza.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Member</h5>
+              <p class="card-text">Muhammad Hamza</p>
+            </div>
+          </div>
+        </center>
+    </div>
+    </div>
+    <br><br>
+    <center>
+      <a href='/home'>
+    <button class="btn btn-primary btn-lg btn-block" style="font-size:24px"> <i class="fa fa-hand-o-left" style="font-size:36px;color:"blue"></i> Go Back</button>
+      </a>  
+  </center>
+    <br><br>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+
+h1{
+    text-size:"30px";
+    
+  }
+.container{
+    
+    width: 600px;
+    height: 50px;
+    margin-top: 10px;
+
+}
+
+body{
+    background-color:white;
+}
+.btn-primary{
+    border-radius: 100px;
+}
+.slides{
+    width: 50%;
+    height: 500px;
+}
+#carouselExampleIndicators{
+    background-color: white;
+}
+.car_button{
+    color: black;
+    size: 36px;
+}
+.input{
+    border-radius: 100px;
+    width: 220px;
+}
+a:after{
+    content: "";
+    position: absolute;
+    background-color: aqua;
+    height: 3px;
+    width: 0px;
+    left: 0%;
+    bottom: -10px;
+}
+a:hover:after{
+ width: 100px;
+}
+.nav-item{
+    text-align: center;
+    padding-right: 50px;
+}

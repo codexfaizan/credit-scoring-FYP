@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='home.css')}}"> 
+</head>
+<style>
+  body
+  {
+  background-image:url({{url_for('static',filename="bg01.png")}})
+  }
+</style>
+  <center>
+  <body >
+    
+    <nav class="navbar navbar-expand-lg bg-light ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          <img src="static/logo.png" width="20%">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 container">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/"><h3>Home</h3></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about"><h3>About Us</h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000" >
+          <img class="slides" src="static/slide01.png" class="d-block w-50" alt="..." width="50%">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img class="slides" src="static/slide02.png" class="d-block w-50" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img class="slides" src="static/slide03.png" class="d-block w-50" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev car_button" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next car_button" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <br><br>
+    </div>
+   
+    <div class="container">
+      <h1>Credit Score Analysis</h1>
+    </div><br>
+  
+        <form action="/after-submit", method="POST">
+          
+          <label for="dependents"><b>How Many No. Of Dependents?</b></label><br>
+        <input class="input" type="number" name="dependents" placeholder="No. of Dependents" required="required" size=25 min="0" max="10" /><br><br>
+         
+        <label for="Age"><b>What Is Your Age?</b></label><br>
+        <input class="input" type="number" name="age" placeholder="Your Age" required="required" size=25 min="16" /><br><br>
+        
+        <label for="Income"><b>What Is Your Income?</b></label><br>
+        <input class="input" type="number" name="income" placeholder="Your Income" required="required" size=25 min="20000" /><br><br>
+          
+        <label for="Unsecured "><b>How Many Unsecured Lines?</b></label><br>
+        <input class="input" type="number" step="any" name="unsecured_lines" placeholder="unsecured_lines" required="required" size=25 min="0" max="1" /><br><br>
+        
+        <label for="Debt Ratio "><b>What Is Your Debt Ratio?</b></label>
+          <i class="fa fa-question-circle" data-toggle="popover" data-bs-placement="right"
+          data-bs-custom-class="custom-popover"
+          title="Debt Ratio"
+          data-bs-content="Debt Ratio is a financial ratio that indicates the percentage of a company's assets that are provided via debt. ">
+         </i><br>
+        <input class="input" type="number" step="any" name="debt_ratio" placeholder="debt ratio" required="required" size=25 min="0" /><br><br>
+         
+        <label for="Times Delayed "><b>How Many Times You Delayed Your Payments?</b></label><br>
+        <input class="input" type="number" step="any" name="days_late" placeholder="number of Times Delayed" required="required" size=25 min="0" /><br><br>
+
+        <label for="Times Delayed "><b>How Many No. Of Real Estate Loans?</b></label><br>
+        <input class="input" type="number" name="Real_Estate_Loans" placeholder="Real EState Loans" required="required" size=25 min="0" /><br><br>
+           
+        <button type="submit" class="btn btn-outline-success">Predict!</button>
+        </form>
+      <button>
+        
+      </button>
+       <br>
+       <br>
+       <!--{{ prediction_text }}-->
+    
+     
+ 
+  </body>
+</center>
+</html>
+ 
