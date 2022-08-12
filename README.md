@@ -4,3 +4,4 @@ we got from model was up to 80%. The most accurate of these classifiers were
 gradient boosting and bagging, with an accuracy of up to 90%. The final model has been
 developed and deployed using Flask (micro-framework for backend web development in
 Python). It has a beautiful login and signup page. The database used is MYSQL.
+There is a video file attached in which I gave a demo of project.
